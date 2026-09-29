@@ -27,8 +27,8 @@ class Subscription extends Model
     use Starts;
     use Suppresses;
 
-    protected $dates = [
-        'canceled_at',
+    protected $casts = [
+        'canceled_at' => 'datetime',
     ];
 
     protected $fillable = [
