@@ -27,6 +27,11 @@ class Subscription extends Model
     use Starts;
     use Suppresses;
 
+    protected static function newFactory()
+    {
+        return \LucasDotVin\Soulbscription\Database\Factories\SubscriptionFactory::new();
+    }
+
     protected $casts = [
         'canceled_at' => 'datetime',
     ];

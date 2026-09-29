@@ -12,8 +12,8 @@ return new class() extends Migration {
      */
     public function up()
     {
-        Schema::table('feature_tickets', function (Blueprint $table) {
-            $table->timestamp('expired_at')->nullable()->change();
+        Schema::table('subscriptions', function (Blueprint $table) {
+            $table->timestamp('started_at')->nullable(false)->change();
         });
     }
 };
